@@ -1,0 +1,25 @@
+# Virtual environment
+/env/
+/venv/
+
+# Python compiled byte code
+*.pyc
+
+# SQLite3 database
+*.sqlite3
+
+# Node modules
+node_modules/
+
+# Bower components
+static/bower_components/
+
+# Uglified JavaScript
+dist/
+
+# Staticfiles
+staticfiles/
+
+
+__pycache__
+local_settings.py
