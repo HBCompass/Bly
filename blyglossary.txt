@@ -1,0 +1,128 @@
+"""
+A glossary to maintain order and clarity for publishing terms across platforms.
+
+"""
+
+-- Term --
+
+
+
+*------------------------*
+	   PLATFORMS
+*------------------------*
+""" Definitions of what each platform label means in Bly. """
+
+
+-- Interactive Web --
+	Web product outside of regular publishing flow. Ex: Special projects, custom presentation, series, liveblogs, interactive coverage with user input, etc.
+
+-- General Web --
+	Regularly published web content. Ex: Daily news, articles, videos, photo galleries
+
+-- Ebooks --
+	Content packaged into Ebook format. Ex: Series or one-off publications on special topics or aggregated coverage.
+
+-- Apps --
+	App presentation of content or project.
+
+-- Social Projects --
+	Content published exclusively via a social platform. Ex: Crowd-sourcing projects, photo contests, art maps.
+
+-- Push Notifications --
+	Breaking news notifications, emergency alerts, EAS broadcasts.
+
+-- Webcast (live/pre) --
+	Webcast video of live or pre-recorded shows.
+
+-- Simultaneous Webcast --
+	Multiple live webcasts on different shows. Ex: CSPAN-style government coverage. 
+
+-- Newspaper --
+	Daily, weekly newspaper content.
+
+-- Magazine --
+	Weekly, monthly, etc magazine content
+
+-- Newsletter --
+    Newsletter content
+
+-- Book --
+    Single book or series publishing
+
+-- Scheduled TV --
+	Regularly scheduled TV programming. Ex: Documentaries, specials, pre-recorded casts
+
+-- Live TV --
+    Live television programming. Ex: Morning and nightly news.
+
+-- Breaking TV --
+	Unscheduled television programming for breaking news events.
+
+-- Radio --
+    Scheduled radio programming. Ex: Morning Edition, All Things Considered
+
+-- Podcast --
+	Podcast packaging of audio content.
+
+-- Breaking Radio --
+	Unscheduled radio programming for breaking news events.
+
+-- Studio Events --
+	Audio/TV/Performance studio events.  Ex. Alaska Originals, Forum@360
+
+-- Live Events --
+    Non-studio live events hosted or recorded. Ex. Celebration, Inauguration
+
+
+*------------------------*
+	  COLLABORATORS
+*------------------------*
+""" Types of collaborators. """
+
+-- Collaborator --
+	General term for a user.
+
+-- Noncontent --
+	Non content producing role. Allowed to see all entries. Can edit none.
+
+-- Affiliate --
+	Level of access for an affiliate member. Allowed to see entries shared with the network the affiliate is a member of.Can edit assigned stories.
+
+-- Contributor --
+	Level of access for a freelancer or contractor. Allowed to see only their own entries, or entries they have been added to. Can edit assigned stories.
+
+-- Staff --
+	Staff level access. Can see all content. Can edit all content.
+
+-- Administrator --
+	Master level access. Can see all content. Can edit all content. Can make/change users.
+
+
+*------------------------*
+	  		ROLES
+*------------------------*
+""" Roles and metadata associated with those roles. """
+
+*Note: Any collaborator can occupy more than one role in a story. For example, a writer will often shoot their own photos or video. Sometimes it is a second collaborator.
+
+
+-- Writer --
+
+
+
+-- Editor --
+
+
+-- Photographer --
+
+
+-- Videographer --
+-- Director --
+-- Producer --
+-- Designer --
+-- Developer --
+-- Term --
+-- Term --
+-- Term --
+-- Term --
+-- Term --

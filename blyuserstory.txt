@@ -1,0 +1,53 @@
+"""
+
+What can a user do?
+
+*Which items appear in each view are dependent on that user's permission levels. The following story assumes the user only sees what they have permission to see.
+
+"""
+
+Login
+
+*-------------------*
+	 DASHBOARD
+*-------------------*
+""" The main view the user operates from. """
+
+The navbar allows the user to do a system-wide search, logout, adjust profile settings and see notifications.
+
+Notifications for any changes in subscribed story status. (Editors are automatically subscribed to all stories under their desk. Users are automatically subscribed to stories they are attached to. Other users can opt in to subscriptions.)
+
+The editorial queue is displayed as the default view of the dashboard:
+
+Slug    Byline    DueforEdit    PublishDate    Editor    Platform    Status
+
+The table is sortable by these columns.
+
+The user can opt into a calendar view which displays stories based on either DueforEdit or PublishDate.
+
+Clicking on a story takes the user into the Story Page.
+Clicking on Network takes the user to the editorial queue of any groups in a shared network.
+
+*-------------------*
+	 STORY PAGE
+*-------------------*
+""" The view where a new story is created or edited. This is where all of the metadata for a piece of content is managed and from here the user can create/edit/manage the versions of a story across the collection if the story spans multiple platforms. """
+
+
+*-------------------*
+	   SERIES
+*-------------------*
+""" The view that displays stories/collections from reporting series. """
+
+
+*-------------------*
+	  NETWORKS
+*-------------------*
+""" The view displaying the editorial queue from other organizations in a network. """
+
+
+*-------------------*
+	USERSETTINGS
+*-------------------*
+""" The place where users can edit their profile settings, availability, etc. """
+
