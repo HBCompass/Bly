@@ -8,7 +8,9 @@ from django.db import models
 from django.utils import timezone
 from postgres.fields import ArrayField
 
-# Create your models here.
+# Models
+
+#Users and permissions
 
 class Collaborator(models.Model):
     """Class encompassing all of the possible roles in a story. Ex. Reporter, Editor, or Photographer."""
@@ -54,13 +56,45 @@ class Role(models.Model):
     """The types of roles involved in a story."""
     pass
 
+#Stories and platforms
 
 class Story(models.Model):
     """The universal traits of any story. """
-    slug = models.CharField(max_length=20, nullable=False, unique=True)  #usually couple words plus date ex. "highwaycrash022315"
+    storyid = models.AutoField(primary_key=True)
+    slug = models.CharField(max_length=20, nullable=False, unique=True)  #usually couple words plus date ex. "crash022315"
     byline = models.CharField(max_length=100, nullable=False)
     editor = models.CharField(max_length=100, nullable=False)
 
+
+class Web(Story):
+    """The general web post version of content. Regularly published web content. Ex: Daily news, articles, videos, photo galleries"""
+    web_id = models.AutoField(primary_key=True)
+
+class Print(Story):
+    """ The print version of a story. """
+    print_id = models.AutoField(primary_key=True)
+
+class Radio(Story):
+    """ Scheduled radio programming. Ex: A segment on Morning Edition. """
+    radio_id = models.AutoField(primary_key=True)
+
+class Tv(Story):
+    """ A scheduled tv program. """
+    tv_id = models.AutoField(primary_key=True)
+
+
+
+# A created story
+# class Entry(models.Model):
+#     """A created story."""
+#     entry = models.ForeignKey(StoryMaker)
+#     respondent_id = models.IntegerField("respondent ID",)
+#     created_at = models.DateTimeField(auto_now_add=True,)
+#     def __str__(self):
+#         return "%s %s" % (self.survey.name, self.id)
+
+
+#Creating a story
 
 class StoryMaker(models.Model):
     """Creating a story."""
@@ -84,20 +118,3 @@ class Question(models.Model):
     text_entry = models.BooleanField(default=False,
         help_text='Check if this question accepts free-form text responses.',
     )
-
-
-class Entry(models.Model):
-    """A created story."""
-
-    entry = models.ForeignKey(StoryMaker)
-
-    respondent_id = models.IntegerField(
-        "respondent ID",
-    )
-
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-    )
-
-    def __str__(self):
-        return "%s %s" % (self.survey.name, self.id)

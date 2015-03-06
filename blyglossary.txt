@@ -5,6 +5,28 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 
 -- Term --
 
+*------------------------*
+	  ORGANIZATION
+*------------------------*
+""" General terms for stories, series, etc. """
+
+-- Story --
+	A single topic/event to be covered on one or more platforms.
+
+-- ? --
+	The version specific part of a story.
+
+-- Bundle -- 
+	All of the versions of a story across the different platforms.
+
+-- Platform --
+	The publishing method for a story.
+
+-- Series --
+	
+
+-- Collection --
+
 
 
 *------------------------*
@@ -13,19 +35,19 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 """ Definitions of what each platform label means in Bly. """
 
 
--- Interactive Web --
+-- Interactive --
 	Web product outside of regular publishing flow. Ex: Special projects, custom presentation, series, liveblogs, interactive coverage with user input, etc.
 
--- General Web --
+-- Web --
 	Regularly published web content. Ex: Daily news, articles, videos, photo galleries
 
--- Ebooks --
+-- Ebook --
 	Content packaged into Ebook format. Ex: Series or one-off publications on special topics or aggregated coverage.
 
--- Apps --
+-- App --
 	App presentation of content or project.
 
--- Social Projects --
+-- Social Project --
 	Content published exclusively via a social platform. Ex: Crowd-sourcing projects, photo contests, art maps.
 
 -- Push Notifications --
@@ -107,8 +129,7 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 
 
 -- Writer --
-
-
+	
 
 -- Editor --
 
@@ -117,12 +138,27 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 
 
 -- Videographer --
+
+
 -- Director --
+
+
 -- Producer --
+
+
 -- Designer --
+
+
 -- Developer --
--- Term --
--- Term --
--- Term --
--- Term --
--- Term --
+
+
+*------------------------*
+		NETWORK
+*------------------------*
+""" Structure for Network and Affiliate relationships. """
+
+-- Network --
+
+
+-- Affiliate --
+
