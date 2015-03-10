@@ -45,7 +45,7 @@ class Collaborator(models.Model):
 #     )
 
     name = models.CharField(max_length=35, unique=True)
-    title = models.CharField(max_length=75)
+    title = models.CharField(max_length=100)
     email = models.CharField(max_length=100, nullable=False)
     phone = models.CharField(max_length=10, unique=True,
         validators=[
@@ -84,6 +84,8 @@ class Role(models.Model):
 
 #Stories and platforms
 
+
+## MVP classes are Story and Web. Print, Radio, Tv can all be deferred to later.
 class Story(models.Model):
     """The universal traits of any story. """
     storyid = models.AutoField(primary_key=True)
@@ -98,6 +100,9 @@ class Web(Story):
     text = models.TextField()
     edit_date = models.DateTimeField(auto_now=False)
     pub_date = models.DateTimeField(auto_now=False)
+
+
+
 
 class Print(Story):
     """ The print version of a story. """
