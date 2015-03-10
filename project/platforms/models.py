@@ -84,51 +84,63 @@ class Role(models.Model):
 
 #Stories and platforms
 
+# MVP classes are Story and Web. 
+# Print, Radio, Tv can be deferred.
 
-## MVP classes are Story and Web. Print, Radio, Tv can all be deferred to later.
 class Story(models.Model):
     """The universal traits of any story. """
     storyid = models.AutoField(primary_key=True)
     slug = models.CharField(max_length=20, nullable=False, unique=True)  #usually couple words plus date ex. "crash022315"
-    byline = models.CharField(max_length=100, nullable=False)
-    editor = models.CharField(max_length=100, nullable=False)
+    
+# Classes for each thread of a story. 
     
 class Web(Story):
     """The general web post version of content. Regularly published web content. Ex: Daily news, articles, videos, photo galleries"""
     web_id = models.AutoField(primary_key=True)
     date_created = models.DateTimeField(auto_now_add=True)
-    text = models.TextField()
     edit_date = models.DateTimeField(auto_now=False)
     pub_date = models.DateTimeField(auto_now=False)
+    byline = models.CharField(max_length=100, nullable=False)
+    editor = models.CharField(max_length=100, nullable=False)
+    headline = models.CharField(nullable=False)
+    text = models.TextField()
 
-
-
+# Completing remaining classes once Story and Web are complete.
 
 class Print(Story):
     """ The print version of a story. """
     print_id = models.AutoField(primary_key=True)
     date_created = models.DateTimeField(auto_now_add=True)
-    text = models.TextField()
     edit_date = models.DateTimeField(auto_now=False)
     pub_date = models.DateTimeField(auto_now=False)
+    byline = models.CharField(max_length=100, nullable=False)
+    editor = models.CharField(max_length=100, nullable=False)
+    headline = models.CharField(nullable=False)
+    text = models.TextField()
+    # To be continued
 
 class Radio(Story):
     """ Scheduled radio programming. Ex: A single segment on Morning Edition. """
     radio_id = models.AutoField(primary_key=True)
     date_created = models.DateTimeField(auto_now_add=True)
-    text = models.TextField()
     edit_date = models.DateTimeField(auto_now=False)
+    byline = models.CharField(max_length=100, nullable=False)
+    editor = models.CharField(max_length=100, nullable=False)
     pub_date = models.DateTimeField(auto_now=False)
+    text = models.TextField()
+    # To be continued
 
 class Tv(Story):
     """ A scheduled tv program. """
     tv_id = models.AutoField(primary_key=True)
     date_created = models.DateTimeField(auto_now_add=True)
-    text = models.TextField()
     edit_date = models.DateTimeField(auto_now=False)
     pub_date = models.DateTimeField(auto_now=False)
-
-
+    byline = models.CharField(max_length=100, nullable=False)
+    editor = models.CharField(max_length=100, nullable=False)
+    text = models.TextField()
+    # To be continued
+    
 
 # A created story
 # class Entry(models.Model):
@@ -147,20 +159,19 @@ class StoryMaker(models.Model):
 
     name = models.CharField(max_length=100)
     team = models.ManyToManyField(Collaborator, help_text='Which collaborators are participating in this story?',)
-
     created_at = models.DateTimeField(auto_now_add=True)
     
 
     def get_absolute_url(self):
         return reverse('story.detail', kwargs={'pk': self.id})
 
-class Question(models.Model):
-    """A field in the storymaker."""
+# class Question(models.Model):
+#     """A field in the storymaker."""
 
-    template = models.ForeignKey(SurveyTemplate)
-    label = models.CharField(max_length=25,)
-    question = models.CharField(max_length=100,)
-    position = models.IntegerField()
-    text_entry = models.BooleanField(default=False,
-        help_text='Check if this question accepts free-form text responses.',
-    )
+#     template = models.ForeignKey(SurveyTemplate)
+#     label = models.CharField(max_length=25,)
+#     question = models.CharField(max_length=100,)
+#     position = models.IntegerField()
+#     text_entry = models.BooleanField(default=False,
+#         help_text='Check if this question accepts free-form text responses.',
+#     )

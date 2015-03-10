@@ -31,12 +31,12 @@ Clicking on Network takes the user to the editorial queue of any groups in a sha
 *-------------------*
 	 STORY PAGE
 *-------------------*
-""" The view where a new story is created or edited. This is where all of the metadata for a piece of content is managed and from here the user can create/edit/manage the versions of a story across the collection if the story spans multiple platforms. """
+""" The view where a new story is created or edited. This is where all of the metadata for a piece of content is managed and from here the user can create/edit/manage the threads of a story across the collection if the story spans multiple platforms. """
 
 *-------------------*
 	 VERSION EDIT
 *-------------------*
-""" The view that displays the editing field for that version of the story. """
+""" The view that displays the editing field for that thread of the story. """
 
 
 *-------------------*
