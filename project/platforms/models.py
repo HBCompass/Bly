@@ -23,13 +23,26 @@ class Collaborator(models.Model):
     )
 
     PERMISSIONS = (
-        ('Noncontent','Noncontent'),
-        ('Affiliate','Affiliate'),
-        ('Contributor','Contributor'),
-        ('Staff','Staff'),
-        ('Editor','Editor'),
-        ('Administrator','Administrator'),
+        ('noncontent','Noncontent'),
+        ('affiliate','Affiliate'),
+        ('contributor','Contributor'),
+        ('staff','Staff'),
+        ('editor','Editor'),
+        ('administrator','Administrator'),
     )
+
+# #Should role be a choice or its own class?
+
+#     ROLE = (
+#         ('writer','Writer'),
+#         ('editor','Editor'),
+#         ('photographer','Photographer'),
+#         ('videographer','Videographer'),
+#         ('director','Director'),
+#         ('producer','Producer'),
+#         ('designer','Designer'),
+#         ('developer','Developer'),
+#     )
 
     name = models.CharField(max_length=35, unique=True)
     title = models.CharField(max_length=75)
@@ -40,7 +53,7 @@ class Collaborator(models.Model):
                            'Phone numbers must be exactly 10 digits long, like "4155551212"')
         ]
     )
-    roles = models.ManyToManyField(choice=Role)
+    roles = models.ManyToManyField(Role)
     status = models.CharField(max_length=1, choice=STATUS)
     permissions = models.CharField(max_length-1, choice=PERMISSIONS)
 
@@ -54,7 +67,20 @@ class Collaborator(models.Model):
 
 class Role(models.Model):
     """The types of roles involved in a story."""
-    pass
+# How to set up model so the selection of each 
+# Is role better suited as a choice or as a class?
+# Users can have multiple roles within a story or across stories.
+# No role is required other than writer and editor.
+
+    writer = models.BooleanField(default=False)
+    editor = models.BooleanField(default=False)
+    photographer = models.BooleanField(default=False)
+    videographer = models.BooleanField(default=False)
+    director = models.BooleanField(default=False)
+    producer = models.BooleanField(default=False)
+    designer = models.BooleanField(default=False)
+    developer =models.BooleanField(default=False)
+
 
 #Stories and platforms
 
@@ -64,23 +90,38 @@ class Story(models.Model):
     slug = models.CharField(max_length=20, nullable=False, unique=True)  #usually couple words plus date ex. "crash022315"
     byline = models.CharField(max_length=100, nullable=False)
     editor = models.CharField(max_length=100, nullable=False)
-
-
+    
 class Web(Story):
     """The general web post version of content. Regularly published web content. Ex: Daily news, articles, videos, photo galleries"""
     web_id = models.AutoField(primary_key=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    text = models.TextField()
+    edit_date = models.DateTimeField(auto_now=False)
+    pub_date = models.DateTimeField(auto_now=False)
 
 class Print(Story):
     """ The print version of a story. """
     print_id = models.AutoField(primary_key=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    text = models.TextField()
+    edit_date = models.DateTimeField(auto_now=False)
+    pub_date = models.DateTimeField(auto_now=False)
 
 class Radio(Story):
-    """ Scheduled radio programming. Ex: A segment on Morning Edition. """
+    """ Scheduled radio programming. Ex: A single segment on Morning Edition. """
     radio_id = models.AutoField(primary_key=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    text = models.TextField()
+    edit_date = models.DateTimeField(auto_now=False)
+    pub_date = models.DateTimeField(auto_now=False)
 
 class Tv(Story):
     """ A scheduled tv program. """
     tv_id = models.AutoField(primary_key=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    text = models.TextField()
+    edit_date = models.DateTimeField(auto_now=False)
+    pub_date = models.DateTimeField(auto_now=False)
 
 
 
