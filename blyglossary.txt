@@ -13,7 +13,7 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 -- Story --
 	A single topic/event to be covered on one or more platforms.
 
--- ? --
+-- Thread --
 	The version specific part of a story.
 
 -- Bundle -- 
@@ -23,10 +23,10 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 	The publishing method for a story.
 
 -- Series --
-	
+	Multiple stories on the same topic.
 
 -- Collection --
-
+	Multiple stories on a similar topic. More specific than a broad category like Politics. 
 
 
 *------------------------*
@@ -129,27 +129,28 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 
 
 -- Writer --
-	
+	Primary reporter/author for the piece. There can be more than one on a story or a thread. 	
 
 -- Editor --
-
+	Responsible for editing a story or thread. Approves for publishing.
 
 -- Photographer --
-
+	Responsible for taking or finding appropriate imagery.
 
 -- Videographer --
-
+	Responsible for taking or finding appropriate motion graphics.
 
 -- Director --
-
+	Responsible for coordination of television/video content.
 
 -- Producer --
-
+	Responsible for content of television/video/radio content.
 
 -- Designer --
-
+	Responsible for creation of motion or still graphics/layout/design/custom imagery.
 
 -- Developer --
+	Responsible for custom development/interaction or novel content presentation.
 
 
 *------------------------*
@@ -157,8 +158,12 @@ A glossary to maintain order and clarity for publishing terms across platforms.
 *------------------------*
 """ Structure for Network and Affiliate relationships. """
 
+-- Organization --
+	A single media organization.
+
+-- Partnership --
+	A relationship between organizations. Being partners means being part of a network. 
+
 -- Network --
-
-
--- Affiliate --
-
+	Partnership between organizations to collaborate on coverage. Members of a network can only see content from their partners that the partner has opted to share. A network is a minimum of 2 organizations. A partner can only see content from first-degree relationships. 
+	
