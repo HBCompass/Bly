@@ -10,7 +10,7 @@ from postgres.fields import ArrayField
 
 # Models
 
-#Users and permissions
+# Users and permissions
 
 class Collaborator(models.Model):
     """Class encompassing all of the possible roles in a story. Ex. Reporter, Editor, or Photographer."""
@@ -31,7 +31,7 @@ class Collaborator(models.Model):
         ('administrator','Administrator'),
     )
 
-# #Should role be a choice or its own class?
+#? Should role be a choice or its own class?
 
 #     ROLE = (
 #         ('writer','Writer'),
@@ -67,10 +67,10 @@ class Collaborator(models.Model):
 
 class Role(models.Model):
     """The types of roles involved in a story."""
-# How to set up model so the selection of each 
-# Is role better suited as a choice or as a class?
-# Users can have multiple roles within a story or across stories.
-# No role is required other than writer and editor.
+
+#? Is role better suited as a choice or as a class?
+#? Users can have multiple roles within a story or across stories.
+#? No role is required other than writer and editor.
 
     writer = models.BooleanField(default=False)
     editor = models.BooleanField(default=False)
@@ -81,8 +81,7 @@ class Role(models.Model):
     designer = models.BooleanField(default=False)
     developer =models.BooleanField(default=False)
 
-
-#Stories and platforms
+# Stories and platforms
 
 # MVP classes are Story and Web. 
 # Print, Radio, Tv can be deferred.
@@ -91,7 +90,8 @@ class Story(models.Model):
     """The universal traits of any story. """
     storyid = models.AutoField(primary_key=True)
     slug = models.CharField(max_length=20, nullable=False, unique=True)  #usually couple words plus date ex. "crash022315"
-    
+    story_editor = models.CharField(max_length=100, nullable=False)
+
 # Classes for each thread of a story. 
     
 class Web(Story):

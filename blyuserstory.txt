@@ -38,6 +38,9 @@ Clicking on Network takes the user to the editorial queue of any groups in a sha
 *-------------------*
 """ The view that displays the editing field for that thread of the story. """
 
+The user can select a thread to edit and the interface creates a copy of the most current version of the thread. 
+That version is then added and saved as a revision allowing the user to see previous changes.
+
 
 *-------------------*
 	   SERIES
@@ -45,10 +48,14 @@ Clicking on Network takes the user to the editorial queue of any groups in a sha
 """ The view that displays stories/collections from reporting series. """
 
 
+
+
 *-------------------*
 	  NETWORKS
 *-------------------*
 """ The view displaying the editorial queue from other organizations in a network. """
+
+An organization can form a network with any other organization. The partners can see content that each organization has opted to share with that particular network. Networks are made up of at least two organizations but can contain as many as the participants desire.
 
 
 *-------------------*
